@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		AB12429E26A9BD360082F1FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB12429C26A9BD360082F1FD /* Main.storyboard */; };
 		AB1242A026A9BD380082F1FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB12429F26A9BD380082F1FD /* Assets.xcassets */; };
 		AB1242A326A9BD380082F1FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB1242A126A9BD380082F1FD /* LaunchScreen.storyboard */; };
+		AB13ED3A26BA230F002F56FF /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB13ED3926BA230F002F56FF /* ViewModel.swift */; };
 		BA8762917C59F0A1734B8BBC /* Pods_oonishiReonKadai13.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F90021C161A47C5E318A224A /* Pods_oonishiReonKadai13.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		AB12429F26A9BD380082F1FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB1242A226A9BD380082F1FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB1242A426A9BD380082F1FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB13ED3926BA230F002F56FF /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		F90021C161A47C5E318A224A /* Pods_oonishiReonKadai13.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_oonishiReonKadai13.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -71,15 +73,56 @@
 		AB12429526A9BD360082F1FD /* oonishiReonKadai13 */ = {
 			isa = PBXGroup;
 			children = (
+				AB13ED3426BA22D8002F56FF /* Models */,
+				AB13ED3626BA22E2002F56FF /* Views */,
+				AB13ED3526BA22DD002F56FF /* ViewModels */,
 				AB12429626A9BD360082F1FD /* AppDelegate.swift */,
 				AB12429826A9BD360082F1FD /* SceneDelegate.swift */,
-				AB12429A26A9BD360082F1FD /* ViewController.swift */,
-				AB12429C26A9BD360082F1FD /* Main.storyboard */,
 				AB12429F26A9BD380082F1FD /* Assets.xcassets */,
 				AB1242A126A9BD380082F1FD /* LaunchScreen.storyboard */,
 				AB1242A426A9BD380082F1FD /* Info.plist */,
 			);
 			path = oonishiReonKadai13;
+			sourceTree = "<group>";
+		};
+		AB13ED3426BA22D8002F56FF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AB13ED3526BA22DD002F56FF /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				AB13ED3926BA230F002F56FF /* ViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		AB13ED3626BA22E2002F56FF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AB13ED3826BA22F0002F56FF /* Storyboards */,
+				AB13ED3726BA22EB002F56FF /* Controllers */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AB13ED3726BA22EB002F56FF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AB12429A26A9BD360082F1FD /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		AB13ED3826BA22F0002F56FF /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				AB12429C26A9BD360082F1FD /* Main.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		C80B10E8E1D6A93ACBFE1A6E /* Pods */ = {
@@ -88,7 +131,6 @@
 				33AC7BA2DB5CE81BF38A5602 /* Pods-oonishiReonKadai13.debug.xcconfig */,
 				64E8CA93FE1761E52EC62B79 /* Pods-oonishiReonKadai13.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -208,6 +250,7 @@
 			files = (
 				AB12429B26A9BD360082F1FD /* ViewController.swift in Sources */,
 				AB12429726A9BD360082F1FD /* AppDelegate.swift in Sources */,
+				AB13ED3A26BA230F002F56FF /* ViewModel.swift in Sources */,
 				AB12429926A9BD360082F1FD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
