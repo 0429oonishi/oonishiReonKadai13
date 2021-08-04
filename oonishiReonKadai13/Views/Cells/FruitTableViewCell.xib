@@ -42,6 +42,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="checkButton" destination="8Sa-22-AC7" id="JFa-Tu-OIa"/>
                 <outlet property="fruitNameLabel" destination="zAU-ph-Ucx" id="q2Q-Eb-zgx"/>
             </connections>
             <point key="canvasLocation" x="139" y="109"/>

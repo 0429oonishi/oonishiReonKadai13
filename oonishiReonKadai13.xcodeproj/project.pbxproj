@@ -13,7 +13,9 @@
 		AB12429E26A9BD360082F1FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB12429C26A9BD360082F1FD /* Main.storyboard */; };
 		AB1242A026A9BD380082F1FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB12429F26A9BD380082F1FD /* Assets.xcassets */; };
 		AB1242A326A9BD380082F1FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB1242A126A9BD380082F1FD /* LaunchScreen.storyboard */; };
-		AB13ED3A26BA230F002F56FF /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB13ED3926BA230F002F56FF /* ViewModel.swift */; };
+		AB13ED3D26BA2725002F56FF /* FruitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB13ED3B26BA2725002F56FF /* FruitTableViewCell.swift */; };
+		AB13ED3E26BA2725002F56FF /* FruitTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB13ED3C26BA2725002F56FF /* FruitTableViewCell.xib */; };
+		AB13ED4126BA28A2002F56FF /* Fruit.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB13ED4026BA28A2002F56FF /* Fruit.swift */; };
 		BA8762917C59F0A1734B8BBC /* Pods_oonishiReonKadai13.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F90021C161A47C5E318A224A /* Pods_oonishiReonKadai13.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,7 +30,9 @@
 		AB12429F26A9BD380082F1FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB1242A226A9BD380082F1FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB1242A426A9BD380082F1FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AB13ED3926BA230F002F56FF /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		AB13ED3B26BA2725002F56FF /* FruitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitTableViewCell.swift; sourceTree = "<group>"; };
+		AB13ED3C26BA2725002F56FF /* FruitTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FruitTableViewCell.xib; sourceTree = "<group>"; };
+		AB13ED4026BA28A2002F56FF /* Fruit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fruit.swift; sourceTree = "<group>"; };
 		F90021C161A47C5E318A224A /* Pods_oonishiReonKadai13.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_oonishiReonKadai13.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -75,7 +79,7 @@
 			children = (
 				AB13ED3426BA22D8002F56FF /* Models */,
 				AB13ED3626BA22E2002F56FF /* Views */,
-				AB13ED3526BA22DD002F56FF /* ViewModels */,
+				AB13ED3726BA22EB002F56FF /* Controllers */,
 				AB12429626A9BD360082F1FD /* AppDelegate.swift */,
 				AB12429826A9BD360082F1FD /* SceneDelegate.swift */,
 				AB12429F26A9BD380082F1FD /* Assets.xcassets */,
@@ -88,23 +92,16 @@
 		AB13ED3426BA22D8002F56FF /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				AB13ED4026BA28A2002F56FF /* Fruit.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		AB13ED3526BA22DD002F56FF /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				AB13ED3926BA230F002F56FF /* ViewModel.swift */,
-			);
-			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		AB13ED3626BA22E2002F56FF /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				AB13ED3826BA22F0002F56FF /* Storyboards */,
-				AB13ED3726BA22EB002F56FF /* Controllers */,
+				AB13ED3F26BA272B002F56FF /* Cells */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -123,6 +120,15 @@
 				AB12429C26A9BD360082F1FD /* Main.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		AB13ED3F26BA272B002F56FF /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				AB13ED3B26BA2725002F56FF /* FruitTableViewCell.swift */,
+				AB13ED3C26BA2725002F56FF /* FruitTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		C80B10E8E1D6A93ACBFE1A6E /* Pods */ = {
@@ -193,6 +199,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB13ED3E26BA2725002F56FF /* FruitTableViewCell.xib in Resources */,
 				AB1242A326A9BD380082F1FD /* LaunchScreen.storyboard in Resources */,
 				AB1242A026A9BD380082F1FD /* Assets.xcassets in Resources */,
 				AB12429E26A9BD360082F1FD /* Main.storyboard in Resources */,
@@ -248,9 +255,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB13ED4126BA28A2002F56FF /* Fruit.swift in Sources */,
 				AB12429B26A9BD360082F1FD /* ViewController.swift in Sources */,
 				AB12429726A9BD360082F1FD /* AppDelegate.swift in Sources */,
-				AB13ED3A26BA230F002F56FF /* ViewModel.swift in Sources */,
+				AB13ED3D26BA2725002F56FF /* FruitTableViewCell.swift in Sources */,
 				AB12429926A9BD360082F1FD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

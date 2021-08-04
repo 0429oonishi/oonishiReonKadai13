@@ -9,30 +9,23 @@ import UIKit
 
 final class FruitTableViewCell: UITableViewCell {
 
-    @IBOutlet private weak var fruitsNameLabel: UILabel!
+    @IBOutlet private weak var fruitNameLabel: UILabel!
+    @IBOutlet private weak var checkButton: UIButton!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
+    static var identifier: String { String(describing: self) }
+    static var nib: UINib { UINib(nibName: String(describing: self), bundle: nil) }
     
     override func prepareForReuse() {
         super.prepareForReuse()
         
-        
+        checkButton.isHidden = true
+        fruitNameLabel.text = ""
         
     }
     
     func configure(fruit: Fruit) {
-        fruitsNameLabel.text = fruits
+        fruitNameLabel.text = fruit.name
+        checkButton.isHidden = !fruit.isChecked
     }
     
-}
-
-struct Fruit {
-    let name: String
-    let isChecked: Bool
 }
