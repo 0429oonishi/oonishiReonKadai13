@@ -15,11 +15,13 @@ final class FruitTableViewCell: UITableViewCell {
     static var identifier: String { String(describing: self) }
     static var nib: UINib { UINib(nibName: String(describing: self), bundle: nil) }
     
+    // アルファ、編集、選択状態などをリセットするのに使う。
+    // configure(fruit: )でどちらも設定しているので、今回は不要
     override func prepareForReuse() {
         super.prepareForReuse()
         
-        checkButton.isHidden = true
-        fruitNameLabel.text = ""
+//        checkButton.isHidden = true
+//        fruitNameLabel.text = ""
         
     }
     
