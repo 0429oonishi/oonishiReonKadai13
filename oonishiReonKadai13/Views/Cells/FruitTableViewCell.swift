@@ -15,17 +15,8 @@ final class FruitTableViewCell: UITableViewCell {
     static var identifier: String { String(describing: self) }
     static var nib: UINib { UINib(nibName: String(describing: self), bundle: nil) }
     
-    override func prepareForReuse() {
-        super.prepareForReuse()
-        
-        checkButton.isHidden = true
-        fruitNameLabel.text = ""
-        
-    }
-    
     func configure(fruit: Fruit) {
         fruitNameLabel.text = fruit.name
         checkButton.isHidden = !fruit.isChecked
     }
-    
 }

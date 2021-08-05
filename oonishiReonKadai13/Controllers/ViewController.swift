@@ -7,6 +7,15 @@
 
 import UIKit
 
+private extension Fruit {
+    static let testData: [Fruit] = [
+        Fruit(name: "りんご", isChecked: true),
+        Fruit(name: "ぶどう", isChecked: false),
+        Fruit(name: "なし", isChecked: false),
+        Fruit(name: "みかん", isChecked: true),
+    ]
+}
+
 final class ViewController: UIViewController {
     
     @IBOutlet private weak var tableView: UITableView!
@@ -17,7 +26,6 @@ final class ViewController: UIViewController {
         super.viewDidLoad()
         
         setupTableView()
-        
     }
     
     private func setupTableView() {
@@ -27,7 +35,7 @@ final class ViewController: UIViewController {
                            forCellReuseIdentifier: FruitTableViewCell.identifier)
         tableView.tableFooterView = UIView()
     }
-    
+
 }
 
 extension ViewController: UITableViewDelegate {
@@ -37,7 +45,7 @@ extension ViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60
+        60
     }
     
 }
@@ -46,7 +54,7 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView,
                    numberOfRowsInSection section: Int) -> Int {
-        return fruits.count
+        fruits.count
     }
     
     func tableView(_ tableView: UITableView,
