@@ -10,11 +10,4 @@ import Foundation
 struct Fruit {
     let name: String
     let isChecked: Bool
-    
-    static let testData: [Fruit] = [
-        Fruit(name: "りんご", isChecked: true),
-        Fruit(name: "ぶどう", isChecked: false),
-        Fruit(name: "なし", isChecked: false),
-        Fruit(name: "みかん", isChecked: true),
-    ]
 }
