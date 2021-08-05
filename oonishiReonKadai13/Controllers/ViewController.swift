@@ -7,6 +7,20 @@
 
 import UIKit
 
+struct TableViewConstant {
+    static let height: CGFloat = 60
+}
+
+// ViewControllerでしか使っていないため、private extensionで分離
+private extension Fruit {
+    static let testData: [Fruit] = [
+        Fruit(name: "りんご", isChecked: true),
+        Fruit(name: "ぶどう", isChecked: false),
+        Fruit(name: "なし", isChecked: false),
+        Fruit(name: "みかん", isChecked: true),
+    ]
+}
+
 final class ViewController: UIViewController {
     
     @IBOutlet private weak var tableView: UITableView!
@@ -32,12 +46,14 @@ final class ViewController: UIViewController {
 
 extension ViewController: UITableViewDelegate {
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView,
+                   didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60
+    func tableView(_ tableView: UITableView,
+                   heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return TableViewConstant.height
     }
     
 }
